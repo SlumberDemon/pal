@@ -7,11 +7,7 @@ A friend; a chum.
 #### Stable
 
 ```sh
-pip install -U sofapal
-```
-
-```sh
-pipx install sofapal
+pip3 install -U sofapal
 ```
 
 #### Development
