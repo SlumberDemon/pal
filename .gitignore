@@ -3,3 +3,4 @@ build
 dist
 notes.txt
 test.py
+.DS_Store

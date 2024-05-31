@@ -4,6 +4,8 @@ A friend; a chum.
 
 ### Where
 
+#### Stable
+
 ```sh
 pip install -U sofapal
 ```
@@ -12,8 +14,10 @@ pip install -U sofapal
 pipx install sofapal
 ```
 
+#### Development
+
 ```sh
-pip install git+https://github.com/slumberdemon/pal
+pip install -U git+https://github.com/slumberdemon/pal
 ```
 
 ### Why
@@ -45,8 +49,6 @@ npm install
 This file is stored in the `templates` folder. In the example `$1` is used to access the name of the project provided by pal.
 
 It's recommended that the file name is in this format: `language-language-tool.sh`. This will make it easier to search for this template with pal.
-
----
 
 ```shell
 usage: pal create [-h] [-n NAME] [-e {zed,code}]
@@ -82,8 +84,6 @@ To use browse you will need to configure `browse.json` in your configs. The stru
 ```
 
 Pal requires a `default` engine to be set. Any other `engines` added can be accessed by providing the `-e/--engine` option. The url for an engine needs to include `%s` as this will be replaced with the search query.
-
----
 
 ```shell
 usage: pal browse [-h] [-e] query
