@@ -26,7 +26,7 @@ Pal is a command-line interface that includes a range of general features and fu
 pal
 ```
 
-Pal loads configs from the `.pal` folder located in `$HOME`. Example configs can be found in the in [`.pal`](https://github.com/SlumberDemon/pal/tree/main/.pal). Therefore when adding/creating configurations make sure they are in that folder.
+Pal loads configs from the `.pal` folder located in `$HOME`. Example configs can be found in [`.pal`](https://github.com/SlumberDemon/pal/tree/main/.pal). Therefore when adding/creating configurations make sure they are in that folder.
 
 #### Create
 
