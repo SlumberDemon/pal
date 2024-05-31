@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text('utf-8')
 
 setup(
     name='sofapal',
-    version="0.0.1",
+    version="0.0.2",
     description="A friend; a chum.",
     long_description=README,
     long_description_content_type="text/markdown",

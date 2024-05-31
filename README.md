@@ -5,11 +5,11 @@ A friend; a chum.
 ### Where
 
 ```sh
-pip install -U pal
+pip install -U sofapal
 ```
 
 ```sh
-pipx install pal
+pipx install sofapal
 ```
 
 ```sh
@@ -18,7 +18,7 @@ pip install git+https://github.com/slumberdemon/pal
 
 ### How
 
-```py
+```shell
 pal
 ```
 
