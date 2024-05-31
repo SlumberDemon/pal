@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text("utf-8")
 
 setup(
     name="sofapal",
-    version="0.0.2",
+    version="0.0.3",
     description="A friend; a chum.",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -28,7 +28,7 @@ setup(
         "Programming Language :: Python :: 3.12",
     ],
     packages=find_packages(where="."),
-    install_requires=["inquirerpy", "psutil"],
+    install_requires=["inquirerpy"],
     package_dir={"": "."},
     entry_points={
         "console_scripts": [
