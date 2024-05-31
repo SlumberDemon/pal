@@ -1,14 +1,14 @@
-
 #!/usr/bin/env python3
 from pathlib import Path
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
 
 HERE = Path(__file__).parent
-README = (HERE / "README.md").read_text('utf-8')
+README = (HERE / "README.md").read_text("utf-8")
 
 
 setup(
-    name='sofapal',
+    name="sofapal",
     version="0.0.2",
     description="A friend; a chum.",
     long_description=README,
@@ -18,25 +18,25 @@ setup(
     author_email="hi@sofa.sh",
     license="MIT",
     classifiers=[
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
-        'Programming Language :: Python :: 3.12',
+        "Programming Language :: Python :: 3.12",
     ],
-    packages=find_packages(where="pal"),
-    install_requires=['inquirerpy'],
-    package_dir={'': 'pal'},
+    packages=find_packages(where="."),
+    install_requires=["inquirerpy", "psutil"],
+    package_dir={"": "."},
     entry_points={
-        'console_scripts': [
-            'pal=pal.main:run',
+        "console_scripts": [
+            "pal=pal.main:run",
         ],
     },
     project_urls={
-        'Bug Reports': 'https://github.com/slumberdemon/pal/issues',
-        'Source': 'https://github.com/slumberdemon/pal',
+        "Bug Reports": "https://github.com/slumberdemon/pal/issues",
+        "Source": "https://github.com/slumberdemon/pal",
     },
 )

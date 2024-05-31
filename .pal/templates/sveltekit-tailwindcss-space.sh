@@ -39,3 +39,14 @@ echo "<script>
 </script>
 
 <slot />" > ./src/routes/+layout.svelte
+
+# Add deta space
+
+touch Spacefile
+echo "v: 0
+micros:
+- name: $1
+  src: .
+  engine: svelte-kit
+  primary: true
+  dev: yarn dev" > Spacefile
