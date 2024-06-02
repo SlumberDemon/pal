@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text("utf-8")
 
 setup(
     name="sofapal",
-    version="0.0.3",
+    version="0.0.4",
     description="A friend; a chum.",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -28,13 +28,9 @@ setup(
         "Programming Language :: Python :: 3.12",
     ],
     packages=find_packages(where="."),
-    install_requires=["inquirerpy"],
+    install_requires=["inquirerpy", "pytermgui"],
     package_dir={"": "."},
-    entry_points={
-        "console_scripts": [
-            "pal=pal.main:run",
-        ],
-    },
+    entry_points={"console_scripts": ["pal=pal.main:run",],},
     project_urls={
         "Bug Reports": "https://github.com/slumberdemon/pal/issues",
         "Source": "https://github.com/slumberdemon/pal",

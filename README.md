@@ -13,7 +13,12 @@ pip3 install -U sofapal
 #### Development
 
 ```sh
+# clone repository
 pip install -U git+https://github.com/slumberdemon/pal
+# create a virtual environment in the .venv directory
+python3 -m venv .venv
+# set up the current shell to use that virtual environment
+source .venv/bin/activate
 ```
 
 ### Why
@@ -48,6 +53,8 @@ It's recommended that the file name is in this format: `language-language-tool.s
 
 ```shell
 usage: pal create [-h] [-n NAME] [-e {zed,code}]
+
+Create project using a template
 
 options:
   -h, --help            show this help message and exit
@@ -92,4 +99,29 @@ positional arguments:
 options:
   -h, --help    show this help message and exit
   -e, --engine  Select engine to use
+```
+
+#### Weather
+
+Pal can display information on the weather. Pal needs an [`weatherapi`](https://www.weatherapi.com) api key to do so.
+
+Setup for weather is easy and can be done with the following.
+
+```shell
+pal weather
+```
+
+Running with the command with no configs for the first time will start the interactive configuration process. For more information on manual setup, see the examples.
+
+```shell
+usage: pal weather [-h] [-s] [-l LOCATION] [-w]
+
+Weather information
+
+options:
+  -h, --help            show this help message and exit
+  -s, --search          Search location to get information from
+  -l LOCATION, --location LOCATION
+                        Location to get information from
+  -w, --window          Disables displaying weather information via a window
 ```
