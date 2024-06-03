@@ -14,7 +14,7 @@ pip3 install -U sofapal
 
 ```sh
 # clone repository
-pip install -U git+https://github.com/slumberdemon/pal
+pip3 install -U git+https://github.com/slumberdemon/pal
 # create a virtual environment in the .venv directory
 python3 -m venv .venv
 # set up the current shell to use that virtual environment

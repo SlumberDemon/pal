@@ -30,7 +30,11 @@ setup(
     packages=find_packages(where="."),
     install_requires=["inquirerpy", "pytermgui"],
     package_dir={"": "."},
-    entry_points={"console_scripts": ["pal=pal.main:run",],},
+    entry_points={
+        "console_scripts": [
+            "pal=pal.main:run",
+        ],
+    },
     project_urls={
         "Bug Reports": "https://github.com/slumberdemon/pal/issues",
         "Source": "https://github.com/slumberdemon/pal",

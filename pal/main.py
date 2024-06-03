@@ -53,7 +53,10 @@ def run():
         action="store_true",
     )
     weather.add_argument(
-        "-l", "--location", help="Location to get information from", action="store",
+        "-l",
+        "--location",
+        help="Location to get information from",
+        action="store",
     )
     weather.add_argument(
         "-w",
