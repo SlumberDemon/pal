@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text("utf-8")
 
 setup(
     name="sofapal",
-    version="0.0.4",
+    version="0.0.5",
     description="A friend; a chum.",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -28,8 +28,15 @@ setup(
         "Programming Language :: Python :: 3.12",
     ],
     packages=find_packages(where="."),
-    install_requires=["inquirerpy", "pytermgui"],
+    install_requires=[
+        "inquirerpy",
+        "pytermgui",
+        "halo @ git+https://github.com/SlumberDemon/halo",
+    ],
     package_dir={"": "."},
+    package_data={
+        "pal": ["plugins/*.py"],
+    },
     entry_points={
         "console_scripts": [
             "pal=pal.main:run",

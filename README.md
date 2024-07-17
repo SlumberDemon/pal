@@ -1,8 +1,8 @@
 # Pal
 
-A friend; a chum.
+Pal is a modular command-line interface with AI function calling. Pal at its core provides a few in-built plugins, but it can easily be extended. Pal is a personal exploration project.
 
-### Where
+### Install
 
 #### Stable
 
@@ -21,17 +21,40 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### Why
+### Ai
 
-Pal is a command-line interface that includes a range of general features and functions. Pal is a personal exploration into creating a command-line interface using Python with aims to use as few dependencies as possible.
+Pal uses `OpenFunctions-v2` for its AI functionality. For optimal performance, it is recommended to have at least 16 GB of RAM. For instructions on setting up this feature, see below.
 
-### How
+1. Install [ollama](https://ollama.sh)
+2. Download the AI model file from [huggingface](https://huggingface.co/gorilla-llm/gorilla-openfunctions-v2-gguf/tree/main), I recommend `gorilla-openfunctions-v2-q4_K_M.gguf`
+3. Download the [Modelfile](https://github.com/SlumberDemon/pal/blob/main/Modelfile) and modify it by changing `path_to_model_file` to the file you downloaded in step 2
+4. Open a terminal in the same location as the `Modelfile` and run the following command:
+
+```
+ollama create -f Modelfile pal
+```
+
+5. Add the AI configurations by creating `.pal/ai.json` with the following content:
+
+```json
+{
+  "model": "pal:latest",
+  "host": "http://localhost:11434",
+  "trust_mode": false
+}
+```
+
+> Enabling trust mode with `true` will automatically select all commands to be run.
+
+### Config
 
 ```shell
 pal
 ```
 
-Pal loads configs from the `.pal` folder located in `$HOME`. Example configs can be found in [`.pal`](https://github.com/SlumberDemon/pal/tree/main/.pal). Therefore when adding/creating configurations make sure they are in that folder.
+Pal loads configs and plugins from the `.pal` folder located in `$HOME`. Example configs can be found in [`.pal`](https://github.com/SlumberDemon/pal/tree/main/.pal). Therefore, when creating configurations/plugins, make sure they are in that folder. When a command's configuration is missing, Pal will assist you in adding it.
+
+### Inbuilt plugins
 
 #### Create
 
@@ -77,7 +100,7 @@ To use browse you will need to configure `browse.json` in your configs. The stru
     {
       "name": "duckduckgo",
       "url": "https://duckduckgo.com/?q=%s"
-    },
+    }
   ],
   "default": {
     "name": "duckduckgo",
@@ -89,16 +112,18 @@ To use browse you will need to configure `browse.json` in your configs. The stru
 Pal requires a `default` engine to be set. Any other `engines` added can be accessed by providing the `-e/--engine` option. The url for an engine needs to include `%s` as this will be replaced with the search query.
 
 ```shell
-usage: pal browse [-h] [-e] query
+usage: pal browse [-h] [-s SEARCH] [-e] [query]
 
-Web related commands
+Open queries in your browser
 
 positional arguments:
-  query
+  query                 Query to browse using default engine
 
 options:
-  -h, --help    show this help message and exit
-  -e, --engine  Select engine to use
+  -h, --help            show this help message and exit
+  -s SEARCH, --search SEARCH
+                        Search query to browse using default engine
+  -e, --engine          When provided, displays search engine selector
 ```
 
 #### Weather

@@ -5,3 +5,4 @@ notes.txt
 test.py
 .DS_Store
 .venv
+__pycache__
