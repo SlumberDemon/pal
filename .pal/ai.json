@@ -1,0 +1,5 @@
+{
+  "model": "pal:latest",
+  "host": "http://localhost:11434",
+  "trust_mode": false
+}
