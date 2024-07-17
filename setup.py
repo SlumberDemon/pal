@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text("utf-8")
 
 setup(
     name="sofapal",
-    version="0.0.6",
+    version="0.0.9",
     description="A modular command-line interface with AI function calling",
     long_description=README,
     long_description_content_type="text/markdown",

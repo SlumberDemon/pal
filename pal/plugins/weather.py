@@ -194,7 +194,7 @@ class Plugin:
 
         if config:
             self.function["parameters"]["properties"]["location"]["enum"] = [
-                f"{json.loads(config.read_text(encoding="utf-8"))["default"]}"
+                f"{json.loads(config.read_text(encoding='utf-8'))['default']}"
             ]
 
         self.command.add_argument(

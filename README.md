@@ -31,7 +31,7 @@ source .venv/bin/activate
 
 Pal uses `OpenFunctions-v2` for its AI functionality. For optimal performance, it is recommended to have at least 16 GB of RAM. For instructions on setting up this feature, see below.
 
-1. Install [ollama](https://ollama.sh)
+1. Install [ollama](https://ollama.ai)
 2. Download the AI model file from [huggingface](https://huggingface.co/gorilla-llm/gorilla-openfunctions-v2-gguf/tree/main), I recommend `gorilla-openfunctions-v2-q4_K_M.gguf`
 3. Download the [Modelfile](https://github.com/SlumberDemon/pal/blob/main/Modelfile) and modify it by changing `path_to_model_file` to the file you downloaded in step 2
 4. Open a terminal in the same location as the `Modelfile` and run the following command:

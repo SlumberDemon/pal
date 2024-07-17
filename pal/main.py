@@ -84,7 +84,7 @@ def run():
 
                     commands.append(
                         Choice(
-                            f"pal {cmd["name"]} {arguments}",
+                            f"pal {cmd['name']} {arguments}",
                             name=str(cmd["name"]).capitalize(),
                             enabled=(True if data["trust_mode"] else False),
                         ),

@@ -33,7 +33,7 @@ def prompt(query: str, functions: list[dict]) -> str:
     )
 
     payload = {
-        "model": f"{config["model"]}",
+        "model": f"{config['model']}",
         "stream": False,
         "prompt": f"### Instruction: <<function>>{json.dumps(functions)}\n<<question>>{query}\n### Response: ",
     }
