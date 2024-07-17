@@ -31,7 +31,6 @@ setup(
     install_requires=[
         "inquirerpy",
         "pytermgui",
-        "halo @ git+https://github.com/SlumberDemon/halo",
     ],
     package_dir={"": "."},
     package_data={

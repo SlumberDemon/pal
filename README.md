@@ -4,6 +4,12 @@ Pal is a modular command-line interface with AI function calling. Pal at its cor
 
 ### Install
 
+> [!IMPORTANT]
+> Due to the `halo` library on PyPi being outdated it is not installed. Please make sure to install my fork of the library.
+```sh
+pip3 install git+https://github.com/SlumberDemon/halo
+```
+
 #### Stable
 
 ```sh
