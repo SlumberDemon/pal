@@ -9,8 +9,8 @@ README = (HERE / "README.md").read_text("utf-8")
 
 setup(
     name="sofapal",
-    version="0.0.5",
-    description="A friend; a chum.",
+    version="0.0.6",
+    description="A modular command-line interface with AI function calling",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/slumberdemon/pal",
